@@ -15,7 +15,7 @@ import docopt
 basedir = os.path.dirname(os.path.realpath(__file__))
 cachebasedir = os.path.join(basedir, "cache")
 rulesbasedir = os.path.join(basedir, "rules.d")
-rules = os.listdir(rulesbasedir)
+rules = filter(lambda f: not f.startswith("."), os.listdir(rulesbasedir))
 
 class RefreshFailedException(Exception):
     pass
