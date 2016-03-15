@@ -65,10 +65,10 @@ def check_all_rules():
                 continue
             
             if not header_printed:
-                print "*** diffs in rule '%s' ***" % rulename
+                print "** diffs in rule '%s' **" % rulename
                 header_printed = True
             
-            sys.stdout.write(line)
+            print line
         
         # write the new document to the cache if not inhibited
         with file(os.path.join(cachebasedir, rulename), "w") as cache:
