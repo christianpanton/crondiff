@@ -66,6 +66,7 @@ def check_all_rules():
             
             if not header_printed:
                 print "*** diffs in rule '%s' ***" % rulename
+                header_printed = True
             
             sys.stdout.write(line)
         
